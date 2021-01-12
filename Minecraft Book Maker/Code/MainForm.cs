@@ -26,7 +26,7 @@ namespace Minecraft_Book_Maker
 
         private void ConvertButtonClick(object sender, EventArgs e)
         {
-            string alphabet = "аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩЪъЫыЬьЭэЮюЯя.,0123456789\n";
+            string alphabet = "аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩЪъЫыЬьЭэЮюЯя.,0123456789";
             //string[] mass;
             ArrayList words = new ArrayList(); 
             //string[] mass = new string[2000];
@@ -114,8 +114,7 @@ namespace Minecraft_Book_Maker
                 else
                 {
                     flag = false;
-
-                    if (symbol + 1 > 18)
+                    if (ch == '\n' || symbol + 1 > 18)
                     {
                         symbol = 1;
                         line++;
@@ -135,7 +134,7 @@ namespace Minecraft_Book_Maker
                     {
                         symbol += 1;
                     }
-                    if (ch == ' ' && symbol == 1)
+                    if ( (ch == ' ' || ch == '\n') && symbol == 1)
                     {
                         symbol = 0;
                     }
