@@ -26,14 +26,14 @@ namespace Minecraft_Book_Maker
 
         private void ConvertButtonClick(object sender, EventArgs e)
         {
-            string alphabet = "аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩЪъЫыЬьЭэЮюЯя.,0123456789";
+            string alphabet = "аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩЪъЫыЬьЭэЮюЯя.,0123456789\n";
             //string[] mass;
             ArrayList words = new ArrayList(); 
             //string[] mass = new string[2000];
             int n = -1;
             bool flag = false;
 
-            string text = inputTextbox.Text.Replace("\r\n"," ");
+            string text = inputTextbox.Text.Replace("\r\n","\n");
 
             for (int j = 0; j < text.Length; j++)
             {
