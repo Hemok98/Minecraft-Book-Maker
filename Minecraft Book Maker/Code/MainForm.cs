@@ -144,11 +144,12 @@ namespace Minecraft_Book_Maker
                 }
             }
             pagesLength = list + 1;
-            selectedPage = 0;
+            //selectedPage = 0;
             //sb.Append("==============\r\n");
             //cout << endl << endl << list;
 
-            this.selectedPage = 0;
+            if (pagesLength - 1 < this.selectedPage) this.selectedPage = pagesLength - 1;
+
             displayToOutput();
         }
 
