@@ -136,6 +136,10 @@ namespace Minecraft_Book_Maker
                     }
                     if ( (ch == ' ' || ch == '\n') && symbol == 1)
                     {
+                        if (ch == ' ' && j > 0 && (text[j-1] == ' ' || text[j - 1] == '\n'))
+                        {
+
+                        } else
                         symbol = 0;
                     }
                     else pages[list] += ch;
